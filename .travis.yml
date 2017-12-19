@@ -14,4 +14,4 @@ before_install:
   - docker build -t vfac/php7compatibility .
 
 script:
-  - docker run --rm --entrypoint /php7checker/vendor/bin/phpcs php7compatibility -i | grep PHPCompatibility
+  - docker run --rm --entrypoint /php7checker/vendor/bin/phpcs vfac/php7compatibility -i | grep PHPCompatibility
