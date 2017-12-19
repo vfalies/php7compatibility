@@ -1,0 +1,17 @@
+sudo: required
+
+services: 
+  - docker
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+before_install:
+  - docker --version
+
+  - docker build -t vfac/php7compatibility .
+
+script:
+  - docker run --rm --entrypoint /php7checker/vendor/bin/phpcs php7compatibility -i | grep PHPCompatibility
