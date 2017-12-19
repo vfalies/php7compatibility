@@ -10,7 +10,7 @@ This container propose to check the compatibility of your code with PHP 7.x
 docker run --rm -v $(pwd):/app vfac/php7compatibility <version> <option> <path>
 ```
 
-### \<version>
+### <version>
 
 PHP Version used to check code compatibility: 7.0, 7.1, 7.2
 
@@ -20,7 +20,9 @@ For instance to check code of the current directory in PHP version 7.1 :
 docker run --rm -v $(pwd):/app vfac/php7compatibility 7.1 .
 ```
 
-### \<option>
+### <option>
+
+#### memory_limit
 
 With large source code, you could have an error message like: 
 
@@ -42,7 +44,47 @@ With a setting to 1Giga of memory:
 docker run --rm -v $(pwd):/app php7compatibility 7.2 -d memory_limit=1G .
 ```
 
-### \<path>
+#### File extensions
+
+You can limit the inspection of your code to specific extension file with the optiion
+
+```
+--extensions=php
+```
+
+Several extensions can be add, with a comma separation
+
+```
+--extensions=php,lib
+```
+
+Exemple
+
+```
+docker run --rm -v $(pwd):/app vfac/php7compatibility 7.1 --extensions=php .
+```
+
+#### Ignoring files and folders
+
+The `--ignore` option can be useful to prevent a big scan of your code.
+
+```
+--ignore=vendor
+```
+
+Several paths can be add, with a comma separation
+
+```
+--ignore=vendor,tmp
+```
+
+Exemple
+
+```
+docker run --rm -v $(pwd):/app vfac/php7compatibility 7.1 --ignore=vendor .
+```
+
+### <path>
 
 Path to inspect into current directory. To inspect all files in current directory use `.`
 
