@@ -1,5 +1,7 @@
 # PHP7Compatibility
 
+[![Build Status](https://travis-ci.org/vfalies/php7compatibility.svg?branch=master)](https://travis-ci.org/vfalies/php7compatibility)
+
 This container propose to check the compatibility of your code with PHP 7.x
 
 ## Usage
@@ -8,7 +10,7 @@ This container propose to check the compatibility of your code with PHP 7.x
 docker run --rm -v $(pwd):/app vfac/php7compatibility <version> <option> <path>
 ```
 
-- <version>
+### \<version>
 
 PHP Version used to check code compatibility: 7.0, 7.1, 7.2
 
@@ -18,7 +20,7 @@ For instance to check code of the current directory in PHP version 7.1 :
 docker run --rm -v $(pwd):/app vfac/php7compatibility 7.1 .
 ```
 
-- <option>
+### \<option>
 
 With large source code, you could have an error message like: 
 
@@ -38,4 +40,12 @@ With a setting to 1Giga of memory:
 
 ```
 docker run --rm -v $(pwd):/app php7compatibility 7.2 -d memory_limit=1G .
+```
+
+### \<path>
+
+Path to inspect into current directory. To inspect all files in current directory use `.`
+
+```
+docker run --rm -v $(pwd):/app vfac/php7compatibility 7.1 .
 ```
