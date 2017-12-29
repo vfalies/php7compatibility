@@ -3,7 +3,7 @@
     "description": "PHP 7.x compatibility checker",
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.2 || ^3.0.2",
-        "wimg/php-compatibility": "*"
+        "wimg/php-compatibility": "8.1.0"
     },
     "prefer-stable" : true,
     "scripts": {
