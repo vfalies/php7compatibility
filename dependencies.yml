@@ -5,7 +5,7 @@ collectors:
   actors:
   # pull requests for all major, minor, and patch updates
   - type: find-replace
-    versions: "L.Y.Y"
+    versions: "L.Y-alpine"
 
 - type: php-composer
   path: /
