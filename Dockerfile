@@ -1,9 +1,14 @@
-FROM vfac/envdevphpbase:7.2-alpine
+FROM vfac/envdevphpbase:7.2-alpine-cli
 LABEL maintainer="Vincent Faliès <vincent@vfac.fr>"
 
 COPY composer.json /php7checker/composer.json
+
+USER root
+RUN chown -R vfac:vfac /php7checker
+
+USER vfac
 RUN cd /php7checker \
-    && composer update --lock
+    && composer install
 
 WORKDIR /app
 
