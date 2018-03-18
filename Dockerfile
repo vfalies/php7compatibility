@@ -1,4 +1,4 @@
-FROM vfac/envdevphpbase:7.2-alpine-cli
+FROM vfac/envdevphpbase:7.2-cli-alpine
 LABEL maintainer="Vincent Faliès <vincent@vfac.fr>"
 
 COPY composer.json /php7checker/composer.json
