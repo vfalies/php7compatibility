@@ -3,11 +3,11 @@
     "description": "PHP 7.x compatibility checker",
     "require-dev": {
         "squizlabs/php_codesniffer": "3.3.0",
-        "wimg/php-compatibility": "8.1.0"
+        "phpcompatibility/php-compatibility": "8.2.0"
     },
     "prefer-stable" : true,
     "scripts": {
-        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths /php7checker/vendor/wimg/php-compatibility/PHPCompatibility",
-        "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths /php7checker/vendor/wimg/php-compatibility/PHPCompatibility"
-    }    
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths /php7checker/vendor/phpcompatibility/php-compatibility/PHPCompatibility",
+        "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths /php7checker/vendor/phpcompatibility/php-compatibility/PHPCompatibility"
+    }
 }
