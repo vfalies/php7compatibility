@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.5] - 2019-08-25
+
+### Changed
+
+- Update phpcompatibility to 9.2.0
+- Update php_codesniffer to 3.4.2
+- Upgrade PHP Version base to 7.3
+
 ## [1.4] - 2018-10-10
 
 ### Changed
