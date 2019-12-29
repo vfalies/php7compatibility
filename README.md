@@ -41,7 +41,7 @@ This option set temporary the memory limit php option to 512M
 With a setting to 1Giga of memory:
 
 ```
-docker run --rm -v $(pwd):/app php7compatibility 7.2 -d memory_limit=1G .
+docker run --rm -v $(pwd):/app vfac/php7compatibility 7.2 -d memory_limit=1G .
 ```
 
 #### File extensions
@@ -58,7 +58,7 @@ Several extensions can be add, with a comma separation
 --extensions=php,lib
 ```
 
-Exemple
+Example
 
 ```
 docker run --rm -v $(pwd):/app vfac/php7compatibility 7.1 --extensions=php .
