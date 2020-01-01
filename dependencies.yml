@@ -1,15 +1,14 @@
 collectors:
+  - type: dockerfile
+    path: Dockerfile
+    actors:
+      # pull requests for all major, minor, and patch updates
+      - type: find-replace
+        versions: "L.Y-alpine"
 
-- type: dockerfile
-  path: Dockerfile
-  actors:
-  # pull requests for all major, minor, and patch updates
-  - type: find-replace
-    versions: "L.Y-alpine"
-
-- type: php-composer
-  path: /
-  actors:
-  # pull requests for all major, minor, and patch updates
   - type: php-composer
-    versions: "Y.Y.Y"    
+    path: /
+    actors:
+      # pull requests for all major, minor, and patch updates
+      - type: php-composer
+        versions: "Y.Y.Y"
