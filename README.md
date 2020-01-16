@@ -14,7 +14,7 @@ docker run --rm -v $(pwd):/app vfac/php7compatibility <version> <option> <path>
 
 PHP Version used to check code compatibility: 7.0, 7.1, 7.2, 7.3, 7.4
 
-For instance to check code of the current directory in PHP version 7.1 :
+For instance to check code of the current directory in PHP version 7.4 :
 
 ```
 docker run --rm -v $(pwd):/app vfac/php7compatibility 7.4 .
